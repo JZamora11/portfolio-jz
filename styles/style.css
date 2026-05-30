@@ -86,6 +86,18 @@ html {
     border-radius: 50px;
 }
 
+.list-navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Empieza en 0 */
+    height: 2px; /* Cambié a 2px para que haga juego con los bordes de tus tarjetas */
+    background-color: var(--accent-color);
+    border-radius: 50px;
+    transition: width 0.3s ease; /* Hace que la línea se estire con suavidad */
+}
+
 
 /* HERO SECTION */
 .hero {
@@ -333,9 +345,10 @@ html {
     height: 240px;
     border-radius: 18px 0 0;
     overflow: hidden;
+    margin-top: 34px;
+    margin-left: 34px;
     -webkit-mask-image: linear-gradient(to bottom, rgba(226, 182, 90, 1) 10%, rgba(226, 182, 90, 0) 90%);
     mask-image: linear-gradient(to bottom, rgba(226, 182, 90, 1) 10%, rgba(226, 182, 90, 0) 90%);
-    transform: translate(34px, 34px);
 }
 
 .card-image {
@@ -356,7 +369,7 @@ html {
 }
 
 .card-content {
-    padding: 32px;
+    padding: 0 32px 32px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -370,7 +383,6 @@ html {
 }
 
 .software-badge {
-    align-self: flex-start;
     font-family: var(--font-mono);
     font-size: 0.9rem;
     padding: 6px 14px;
@@ -386,6 +398,7 @@ html {
 
 .software-badge img {
     width: 0.95rem;
+    height: 0.95rem;
     display: flex;
     align-items: center;
     pointer-events: none;
@@ -412,4 +425,5 @@ html {
 .btn-explore:hover {
     background-color: #d8a94a;
     transform: translateY(-3px);
+    padding: 12px 78px;
 }
