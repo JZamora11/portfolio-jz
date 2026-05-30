@@ -21,7 +21,8 @@
 html {
     scroll-behavior: smooth;
     font-family: var(--font-poppins);
-    background-color: var(--bg-dark);
+    background-color: #0f0f11;
+    background-image: url("https://www.transparenttextures.com/patterns/navy.png");
     color: var(--text-white);
 }
 
@@ -91,11 +92,11 @@ html {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0; /* Empieza en 0 */
-    height: 2px; /* Cambié a 2px para que haga juego con los bordes de tus tarjetas */
+    width: 0;
+    height: 2px;
     background-color: var(--accent-color);
     border-radius: 50px;
-    transition: width 0.3s ease; /* Hace que la línea se estire con suavidad */
+    transition: width 0.3s ease;
 }
 
 
@@ -103,7 +104,13 @@ html {
 .hero {
     min-height: 100vh;
     width: 100%;
-    background: radial-gradient(125% 100% at center 40%, #272011 9%, rgba(15, 15, 17, 0.6) 45%, #0F0F11 76%), #0F0F11;
+    background-image:
+        radial-gradient(
+            125% 100% at center 40%,
+            #272011 9%,
+            rgba(15, 15, 17, 0.6) 45%,
+            #0F0F11 76%
+        ), url("https://www.transparenttextures.com/patterns/navy.png");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -225,7 +232,7 @@ html {
 
 /* PROJECTS SECTION */
 .projects-section {
-    background-color: var(--bg-dark);
+    /* background-color: var(--bg-dark); */
     padding: 25px 20px 100px;
     width: 100%;
     display: flex;
@@ -301,7 +308,7 @@ html {
 }
 
 .project-card {
-    background-color: rgba(15, 15, 17, 0.02);
+    background-color: var(--bg-dark);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     position: relative;
