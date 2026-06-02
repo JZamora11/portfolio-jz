@@ -21,7 +21,7 @@
 html {
     scroll-behavior: smooth;
     font-family: var(--font-poppins);
-    background-color: #0f0f11;
+    background-color: var(--bg-dark);
     background-image: url("https://www.transparenttextures.com/patterns/navy.png");
     color: var(--text-white);
 }
@@ -191,7 +191,7 @@ html {
     width: 250px;
     padding: 10px;
     background-color: var(--accent-color);
-    color: #000000;
+    color: var(--bg-dark);
 }
 
 .btn-primary:hover {
@@ -426,7 +426,7 @@ html {
     width: auto;
     padding: 12px 72px;
     background-color: var(--accent-color);
-    color: #000000;
+    color: var(--bg-dark);
 }
 
 .btn-explore:hover {
@@ -893,7 +893,7 @@ html {
     color: var(--text-white);
     font-family: var(--font-mono);
     font-size: 0.95rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .footer-social {
