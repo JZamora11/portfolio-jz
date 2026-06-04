@@ -8,6 +8,9 @@
     <!-- CSS Styles -->
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/projects.css">
+
+    <!-- Script -->
+    <script src="./js/projects.js"></script>
 </head>
 <body>
     <main class="projects-page">
@@ -24,67 +27,68 @@
             <div class="portfolio-layout-container">
                 <!-- Filter -->
                 <aside class="category-sidebar">
-                    <h3 class="sidebar-title">Category</h3>
+                    <div class="sidebar-header">
+                        <h3 class="sidebar-title">Category</h3>
+                        <button type="button" class="filter-toggle" aria-label="Mostrar categorías">
+                            <span class="selected-filter-text">All</span>
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                    </div>
                     <ul class="category-list">
-                        <li class="category-item"><a href="#" class="category-link active">All</a></li>
-                        <li class="category-item"><a href="#" class="category-link">Short Films <span>(1)</span></a></li>
-                        <li class="category-item"><a href="#" class="category-link">Motion Graphics <span>(1)</span></a></li>
-                        <li class="category-item"><a href="#" class="category-link">Commercial & Social <span>(1)</span></a></li>
-                        <li class="category-item"><a href="#" class="category-link">Digital & Interactive <span>(1)</span></a></li>
+                        <li class="category-item"><a href="#" class="category-link active" data-category="all">All</a></li>
+                        <li class="category-item"><a href="#" class="category-link" data-category="short-films">Short Films <span>(1)</span></a></li>
+                        <li class="category-item"><a href="#" class="category-link" data-category="motion-graphics">Motion Graphics <span>(1)</span></a></li>
+                        <li class="category-item"><a href="#" class="category-link" data-category="commercial">Commercial & Social <span>(1)</span></a></li>
+                        <li class="category-item"><a href="#" class="category-link" data-category="digital">Digital & Interactive <span>(1)</span></a></li>
                     </ul>
                 </aside>
 
                 <!-- Grid Projects -->
                 <div class="grid-dinamico-proyectos">
-                    <a href="./projects/project-1.html" class="portfolio-item f-1-1">
+                    <a href="./projects/project-1.html" class="portfolio-item f-1-1" data-category="motion-graphics">
                         <img src="./assets/img/logo.jpg" alt="Logo de prueba" class="portfolio-bg-img">
-
                         <div class="label">
-                            <h2>Project Nº 1</h2>
+                            <h2>Project 1:1</h2>
                             <div class="software-badge">
                                 <img src="./assets/img/brands/after-effects.png" alt="After Effects"> After Effects
                             </div>
                         </div>
                     </a>
 
-                    <a href="./projects/project-2.html" class="portfolio-item f-21-9">
+                    <a href="./projects/project-2.html" class="portfolio-item f-21-9" data-category="short-films">
                         <img src="./assets/img/logo.jpg" alt="Logo de prueba" class="portfolio-bg-img">
-
                         <div class="label">
-                            <h2>Project Nº 2</h2>
+                            <h2>Project 21:9</h2>
                             <div class="software-badge">
                                 <img src="./assets/img/brands/after-effects.png" alt="After Effects"> After Effects
                             </div>
                         </div>
                     </a>
 
-                    <a href="./projects/project-3.html" class="portfolio-item f-9-16">
+                    <a href="./projects/project-3.html" class="portfolio-item f-9-16" data-category="commercial">
                         <img src="./assets/img/logo.jpg" alt="Logo de prueba" class="portfolio-bg-img">
-
                         <div class="label">
-                            <h2>Project Nº 3</h2>
+                            <h2>Project 9:16</h2>
                             <div class="software-badge">
                                 <img src="./assets/img/brands/after-effects.png" alt="After Effects"> After Effects
                             </div>
                         </div>
                     </a>
 
-                    <a href="./projects/project-4.html" class="portfolio-item f-4-5">
+                    <a href="./projects/project-4.html" class="portfolio-item f-4-5" data-category="digital">
                         <img src="./assets/img/logo.jpg" alt="Logo de prueba" class="portfolio-bg-img">
-
                         <div class="label">
-                            <h2>Project Nº 4</h2>
+                            <h2>Project 4:5</h2>
                             <div class="software-badge">
                                 <img src="./assets/img/brands/after-effects.png" alt="After Effects"> After Effects
                             </div>
                         </div>
                     </a>
 
-                    <a href="./projects/project-5.html" class="portfolio-item f-16-9">
+                    <a href="./projects/project-5.html" class="portfolio-item f-16-9" data-category="motion-graphics">
                         <img src="./assets/img/logo.jpg" alt="Logo de prueba" class="portfolio-bg-img">
-
                         <div class="label">
-                            <h2>Project Nº 5</h2>
+                            <h2>Project 16:9</h2>
                             <div class="software-badge">
                                 <img src="./assets/img/brands/after-effects.png" alt="After Effects"> After Effects
                             </div>
