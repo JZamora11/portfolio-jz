@@ -408,6 +408,13 @@
     }
 }
 
+@media (min-width: 1025px) {
+    .category-sidebar {
+        position: sticky;
+        top: 40px;
+    }
+}
+
 /* VERTICAL TABLETS & MOBILES */
 @media (max-width: 1024px) {
     .portfolio-hero {
