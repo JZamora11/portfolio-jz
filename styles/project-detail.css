@@ -31,6 +31,7 @@
     justify-content: center;
     box-sizing: border-box;
     position: relative;
+    gap: 32px;
 }
 
 .media-container-card {
@@ -41,9 +42,12 @@
                 0 0 100px rgba(0, 0, 0, 0.2);
     display: flex;
     transition: all 0.4s ease;
-    height: 75vh; 
-    width: auto;
     margin: 0 auto;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 75vh;
 }
 
 .project-media-content {
@@ -56,11 +60,25 @@
 }
 
 .placeholder-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(110deg, #1d1d1f 8%, #28282b 18%, #1d1d1f 33%);
+    background: linear-gradient(110deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 70%);
     background-size: 200% 100%;
-    animation: shine 3s infinite linear;
+    animation: shine 2.5s infinite linear;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.project-media-content img,
+.project-media-content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
 @keyframes shine {
@@ -73,7 +91,7 @@
     left: 50%;
     transform: translate(-50%, -68%); 
     margin: 0;
-    font-size: 3rem;
+    font-size: clamp(1.6rem, 5vw, 3rem);
     font-weight: 800;
     color: var(--text-white);
     text-transform: uppercase;
@@ -155,30 +173,40 @@
 
 .software-badges-container {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     margin-bottom: 24px;
 }
 
-.badge {
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 6px 14px;
+.badge-software {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(226, 182, 90, 0.25);
+    padding: 6px 12px;
     border-radius: 20px;
-    color: var(--text-white);
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 8px;
+    user-select: none;
 }
 
-.badge-ae { border-color: rgba(144, 107, 255, 0.3); background-color: rgba(144, 107, 255, 0.05); }
-.badge-pr { border-color: rgba(234, 115, 255, 0.3); background-color: rgba(234, 115, 255, 0.05); }
-.badge-ai { border-color: rgba(255, 159, 67, 0.3); background-color: rgba(255, 159, 67, 0.05); }
+.software-icon-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: block;
+}
+
+.software-text {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent-color);
+}
 
 .project-description-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.3;
     color: var(--text-white);
-    margin: 0 0 48px 0;
+    margin: 0 0 32px 0;
     letter-spacing: -0.5px;
     font-family: var(--font-mono);
 }
@@ -187,31 +215,31 @@
     display: flex;
     flex-direction: column;
     gap: 36px;
+    font-family: var(--font-mono);
 }
 
 .step-item h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-style: italic;
     color: var(--text-white);
-    margin: 0 0 10px 0;
 }
 
 .step-item p {
     font-size: 1.05rem;
-    line-height: 1.6;
-    color: #555557;
+    line-height: 1.4;
+    color: var(--text-white);
+    font-weight: 200;
 }
 
 .highlight-text {
-    color: #929294;
-}
-
-.highlight-text-muted {
-    color: #38383a;
+    color: var(--accent-color);
+    font-weight: 500;
 }
 
 .info-right-column {
-    width: 440px;
+    width: 100%;
+    max-width: 440px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -220,6 +248,7 @@
 
 .project-meta-card {
     background-color: var(--accent-color);
+    background-image: url("https://www.transparenttextures.com/patterns/transparent-square-tiles.png");
     border-radius: 24px;
     padding: 32px;
     display: flex;
@@ -328,4 +357,105 @@
     margin: 0;
     font-family: var(--font-mono);
     font-weight: 400;
+}
+
+
+/* RESPONSIVE DESIGN */
+/* PC & HORIZONTAL TABLET */
+@media (max-width: 1200px) {
+    .project-info-container {
+        gap: 40px;
+        padding: 50px 24px;
+    }
+
+    .project-description-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* VERTICAL TABLETS & MEDIUM SCREENS */
+@media (max-width: 992px) {
+    .project-info-container {
+        flex-direction: column;
+        gap: 48px;
+        padding: 40px 24px;
+    }
+
+    .info-left-column {
+        margin-bottom: 20px;
+    }
+
+    .info-right-column {
+        max-width: 100%;
+    }
+}
+
+/* MOBILES */
+@media (max-width: 576px) {
+    .project-showcase-wrapper {
+        padding: 0 16px;
+    }
+
+    .project-showcase-title {
+        font-size: clamp(1.2rem, 6vw, 1.8rem);
+        transform: translate(-50%, -60%);
+    }
+
+    .project-description-title {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .software-badges-container {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info-left-column {
+        text-align: justify;
+    }
+
+    .badge-software {
+        padding: 4px 10px;
+    }
+
+    .software-text {
+        font-size: 0.8rem;
+    }
+
+    .project-steps-list {
+        gap: 28px;
+    }
+
+    .step-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .step-item p {
+        font-size: 0.95rem;
+    }
+
+    .project-meta-card {
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .meta-label {
+        font-size: 1.6rem;
+    }
+
+    .meta-value {
+        font-size: 1rem;
+    }
+
+    .btn-project-cta {
+        max-width: 100%;
+    }
+
+    .footer-copyright {
+        text-align: center;
+    }
 }

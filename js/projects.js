@@ -2,19 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterLinks = document.querySelectorAll('.category-link');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     
-    // Elementos del Dropdown Responsivo
     const sidebar = document.querySelector('.category-sidebar');
     const filterToggle = document.querySelector('.filter-toggle');
     const selectedFilterText = document.querySelector('.selected-filter-text');
 
-    // 🔥 1. LOGICA DE APERTURA/CIERRE DEL DROPDOWN EN MÓVIL
     if (filterToggle && sidebar) {
         filterToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); // Evita que el evento burbujee
+            e.stopPropagation();
             sidebar.classList.toggle('is-open');
         });
 
-        // Cerrar el dropdown si el usuario hace clic fuera de la caja del filtro
         document.addEventListener('click', (e) => {
             if (!sidebar.contains(e.target)) {
                 sidebar.classList.remove('is-open');
@@ -22,38 +19,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. LÓGICA DEL FILTRADO CON TÉCNICA FLIP (Se mantiene intacta y optimizada)
     filterLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
 
             if (link.classList.contains('active')) return;
 
-            // Cambiar estados activos en los links
             filterLinks.forEach(item => item.classList.remove('active'));
             link.classList.add('active');
 
             const selectedCategory = link.getAttribute('data-category');
 
-            // 🔥 ACTUALIZACIÓN RESPONSIVA: Actualizar el texto del dropdown y cerrarlo
             if (selectedFilterText) {
-                // Obtenemos el texto del enlace limpio (sin incluir el número entre span)
                 const cloneNode = link.cloneNode(true);
                 const span = cloneNode.querySelector('span');
                 if (span) span.remove();
                 selectedFilterText.textContent = cloneNode.textContent.trim();
             }
             if (sidebar) {
-                sidebar.classList.remove('is-open'); // Se cierra al elegir categoría
+                sidebar.classList.remove('is-open');
             }
 
-            // FLIP: Guardar posiciones de inicio (First)
             const positions = [];
             portfolioItems.forEach((item, index) => {
                 positions[index] = item.getBoundingClientRect();
             });
 
-            // Etapa 1: Ocultar visualmente lo excluido
             portfolioItems.forEach(item => {
                 const itemCategory = item.getAttribute('data-category');
                 if (selectedCategory !== 'all' && itemCategory !== selectedCategory) {
@@ -61,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Etapa 2: Reacomodar el flujo estructural (150ms)
             setTimeout(() => {
                 portfolioItems.forEach(item => {
                     const itemCategory = item.getAttribute('data-category');
@@ -76,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
-                // FLIP: Calcular diferencias y animar deslizamientos (Last, Invert, Play)
                 requestAnimationFrame(() => {
                     portfolioItems.forEach((item, index) => {
                         const itemCategory = item.getAttribute('data-category');
@@ -99,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
 
-                    // Etapa 3: Fade-in de los nuevos ingresos
                     setTimeout(() => {
                         portfolioItems.forEach(item => {
                             const itemCategory = item.getAttribute('data-category');
