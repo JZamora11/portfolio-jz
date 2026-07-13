@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Fondo circular oscuro para que contraste perfecto en pestañas claras y oscuras -->
+  <circle cx="256" cy="256" r="240" fill="#0F0F11"/>
+  
+  <!-- Trazo de la J (Blanco, limpio, curvo) -->
+  <path d="M 180 160 H 256 V 300 C 256 330 230 356 200 356 C 170 356 150 330 150 300" 
+        stroke="#F8FAFC" 
+        stroke-width="38" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+        
+  <!-- Trazo de la Z (Dorado, angular, entrelazado) -->
+  <path d="M 256 160 H 362 L 256 310 H 362" 
+        stroke="#E2B65A" 
+        stroke-width="38" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+</svg>
