@@ -59,24 +59,10 @@
                 <div class="project-card">
                     <span class="badge-top">Commercial & Social</span>
                     <div class="card-image-wrapper">
-                        <img src="./assets/img/project1.jpg" alt="Project 1" class="card-image">
+                        <img src="./assets/img/projects/octane-thumbnail.png" alt="Octano - Reel 2026" class="card-image">
                     </div>
                     <div class="card-content">
-                        <h4 class="project-name">Project 1</h4>
-                        <div class="card-tags">
-                            <span class="software-badge"><img src="./assets/img/brands/premiere.png" alt="Adobe Premiere Pro"> Premiere Pro</span>
-                            <span class="software-badge"><img src="./assets/img/brands/after-effects.png" alt="Adobe After Effects"> After Effects</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="badge-top">Commercial & Social</span>
-                    <div class="card-image-wrapper">
-                        <img src="./assets/img/project1.jpg" alt="Project 1" class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="project-name">Project 2</h4>
+                        <h4 class="project-name">Octane</h4>
                         <div class="card-tags">
                             <span class="software-badge"><img src="./assets/img/brands/premiere.png" alt="Adobe Premiere Pro"> Premiere Pro</span>
                         </div>
@@ -84,14 +70,30 @@
                 </div>
 
                 <div class="project-card">
-                    <span class="badge-top">Commercial & Social</span>
+                    <span class="badge-top">Digital & Interactive</span>
                     <div class="card-image-wrapper">
-                        <img src="./assets/img/project1.jpg" alt="Project 1" class="card-image">
+                        <img src="./assets/img/project1.jpg" alt="JordanStore - JS Project" class="card-image">
                     </div>
                     <div class="card-content">
-                        <h4 class="project-name">Project 3</h4>
+                        <h4 class="project-name">Jordan Store</h4>
                         <div class="card-tags">
-                            <span class="software-badge"><img src="./assets/img/brands/after-effects.png" alt="Adobe After Effects"> After Effects</span>
+                            <span class="software-badge"><img src="./assets/img/brands/html.png" alt="HTML"> HTML</span>
+                            <span class="software-badge"><img src="./assets/img/brands/css.png" alt="CSS"> CSS</span>
+                            <span class="software-badge"><img src="./assets/img/brands/javascript.png" alt="JavaScript"> JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <span class="badge-top">Digital & Interactive</span>
+                    <div class="card-image-wrapper">
+                        <img src="./assets/img/project1.jpg" alt="RedRoom - HTML & CSS Project" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="project-name">RedRoom</h4>
+                        <div class="card-tags">
+                            <span class="software-badge"><img src="./assets/img/brands/html.png" alt="HTML"> HTML</span>
+                            <span class="software-badge"><img src="./assets/img/brands/css.png" alt="CSS"> CSS</span>
                         </div>
                     </div>
                 </div>
@@ -206,7 +208,10 @@
                     <p>Let's build your next visual experience.</p>
                 </div>
 
-                <form class="contact-form" action="#" method="POST">
+                <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="f4390edb-027d-4b9f-9b8a-d56aac9b9af8">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
                     <div class="form-row-top">
                         <div class="form-group">
                             <label for="name">Name <span>*</span></label>
@@ -226,6 +231,8 @@
                         <label for="message">Tell me about your project <span>*</span></label>
                         <textarea id="message" name="message" rows="5" placeholder="What are you thinking about?" required></textarea>
                     </div>
+
+                    <div id="form-result" style="display: none; margin-bottom: 20px; font-weight: 500; text-align: center; color: var(--accent-color);"></div>
 
                     <button type="submit" class="btn-submit">Send message</button>
                 </form>
