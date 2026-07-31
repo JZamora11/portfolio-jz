@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "contact-message": "Cuéntame sobre tu proyecto <span>*</span>",
             "btn-submit": "Enviar mensaje",
             "hero-title": "PORTAFOLIO",
-            "hero-subtitle": "Una colección de <span>piezas comerciales</span>, <span>narrativas cinematográficas</span> y <span>proyectos multimedia</span>",
+            "hero-subtitle-portfolio": "Una colección de <span>piezas comerciales</span>, <span>narrativas cinematográficas</span> y <span>proyectos multimedia</span>",
             "sidebar-title": "Categoría",
             "selected-filter-text": "Todas",
             "all": "Todas",
