@@ -13,17 +13,20 @@
 
     <!-- JS Files -->
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/translations.js"></script>
 </head>
 <body>
+    <button id="lang-toggle-btn" class="lang-btn" aria-label="Change language" style="position: fixed; z-index: 9999;">EN / ES</button>
+
     <!-- Navbar -->
     <header id="main-header">
         <nav class="navbar">
             <ul class="list-navbar">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav-home" class="active">Home</a></li>
+                <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+                <li><a href="#skills" data-i18n="nav-skills">Skills</a></li>
+                <li><a href="#about-me" data-i18n="nav-about-me">About me</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -32,11 +35,11 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Juan Zamora</h1>
-            <h4 class="hero-subtitle">Video Editor & Multimedia Producer</h4>
+            <h4 class="hero-subtitle" data-i18n="hero-subtitle">Video Editor & Multimedia Producer</h4>
             
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View portfolio</a>
-                <a target="_blank" href="./assets/files/CV_JuanPabloZamora_A2026.pdf" class="btn btn-secondary">Download resume</a>
+                <a href="#projects" class="btn btn-primary" data-i18n="btn-primary">View portfolio</a>
+                <a target="_blank" href="./assets/files/CV_JuanPabloZamora_A2026.pdf" class="btn btn-secondary" data-i18n="btn-secondary">Download resume</a>
             </div>
         </div>
 
@@ -50,20 +53,20 @@
     <section id="projects" class="projects-section">
         <div class="projects-container">
             <div class="projects-header">
-                <h2 class="projects-title-bg">Projects</h2>
-                <h3 class="projects-title">Projects</h3>
-                <p class="projects-subtitle">Technical precision, <span>multimedia sensitivity</span></p>
+                <h2 class="projects-title-bg" data-i18n="projects-title-bg">Projects</h2>
+                <h3 class="projects-title" data-i18n="projects-title">Projects</h3>
+                <p class="projects-subtitle" data-i18n="projects-subtitle">Technical precision, <span>multimedia sensitivity</span></p>
             </div>
 
             <div class="projects-grid">
                 <div class="project-card">
                     <a href="./projects/loyalty-rdr2">
-                        <span class="badge-top">Short Films</span>
+                        <span class="badge-top" data-i18n="badge-top-short">Short Films</span>
                         <div class="card-image-wrapper">
                             <img src="./assets/img/projects/loyalty_thumbnail.png" alt="Loyalty - RDR2 Trailer" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h4 class="project-name">Loyalty</h4>
+                            <h4 class="project-name" data-i18n="project-name-loyalty">Loyalty</h4>
                             <div class="card-tags">
                                 <span class="software-badge"><img src="./assets/img/brands/premiere.png" alt="Adobe Premiere Pro"> Premiere Pro</span>
                             </div>
@@ -73,12 +76,12 @@
 
                 <div class="project-card">
                     <a href="./projects/octane-2026">
-                        <span class="badge-top">Commercial & Social</span>
+                        <span class="badge-top" data-i18n="badge-top-commercial">Commercial & Social</span>
                         <div class="card-image-wrapper">
                             <img src="./assets/img/projects/octane-thumbnail.png" alt="Octano - Reel 2026" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h4 class="project-name">Octane</h4>
+                            <h4 class="project-name" data-i18n="project-name-octane">Octane</h4>
                             <div class="card-tags">
                                 <span class="software-badge"><img src="./assets/img/brands/premiere.png" alt="Adobe Premiere Pro"> Premiere Pro</span>
                             </div>
@@ -88,12 +91,12 @@
 
                 <div class="project-card">
                     <a href="./projects/drop">
-                        <span class="badge-top">Commercial & Social</span>
+                        <span class="badge-top" data-i18n="badge-top-commercial">Commercial & Social</span>
                         <div class="card-image-wrapper">
                             <img src="./assets/img/projects/white_thunder.jpg" alt="Drop - Póster" class="card-image">
                         </div>
                         <div class="card-content">
-                            <h4 class="project-name">Drop</h4>
+                            <h4 class="project-name" data-i18n="project-name-drop">Drop</h4>
                             <div class="card-tags">
                                 <span class="software-badge"><img src="./assets/img/brands/illustrator.png" alt="Illustator"> Illustrator</span>
                             </div>
@@ -103,7 +106,7 @@
             </div>
 
             <div class="projects-footer">
-                <a href="projects" class="btn btn-explore">Explore All Projects</a>
+                <a href="projects" class="btn btn-explore" data-i18n="btn-explore">Explore All Projects</a>
             </div>
         </div>
     </section>
@@ -112,16 +115,16 @@
     <section id="skills" class="skills-section">
         <div class="skills-container">
             <div class="skills-header">
-                <h2 class="skills-title-bg">Skills</h2>
-                <h3 class="skills-title">Skills</h3>
-                <p class="skills-subtitle">A specialized toolkit for <span>cinematic storytelling and interactive experiences</span></p>
+                <h2 class="skills-title-bg" data-i18n="skills-title-bg">Skills</h2>
+                <h3 class="skills-title" data-i18n="skills-title">Skills</h3>
+                <p class="skills-subtitle" data-i18n="skills-subtitle">A specialized toolkit for <span>cinematic storytelling and interactive experiences</span></p>
             </div>
 
             <div class="skills-display">
                 <div class="skills-row">
                     <div class="skills-info">
                         <span class="bg-ampersand">&</span>
-                        <h4>Post-Production<br>Sound</h4>
+                        <h4 data-i18n="post-production">Post-Production<br>Sound</h4>
                     </div>
                     <div class="skills-icons">
                         <img src="./assets/img/brands/premiere.png" alt="Premiere Pro" class="skill-icon-img">
@@ -135,7 +138,7 @@
                 <div class="skills-row">
                     <div class="skills-info">
                         <span class="bg-ampersand">&</span>
-                        <h4>Art Direction<br>UI Design</h4>
+                        <h4 data-i18n="art-direction">Art Direction<br>UI Design</h4>
                     </div>
                     <div class="skills-icons">
                         <img src="./assets/img/brands/illustrator.png" alt="Illustrator" class="skill-icon-img">
@@ -148,7 +151,7 @@
                 <div class="skills-row">
                     <div class="skills-info">
                         <span class="bg-ampersand">&</span>
-                        <h4>Interactive<br>Web Tech</h4>
+                        <h4 data-i18n="interactive">Interactive<br>Web Tech</h4>
                     </div>
                     <div class="skills-icons">
                         <img src="./assets/img/brands/html.png" alt="HTML5" class="skill-icon-img">
@@ -173,27 +176,27 @@
 
             <div class="about-content-column">
                 <div class="about-header">
-                    <h2 class="about-title-bg">About me</h2>
-                    <h3 class="about-title">About me</h3>
+                    <h2 class="about-title-bg" data-i18n="about-title-bg">About me</h2>
+                    <h3 class="about-title" data-i18n="about-title">About me</h3>
                 </div>
 
                 <div class="about-badges-group">
-                    <span class="lang-badge progress-badge">ENG | B2-C1 IN PROGRESS</span>
-                    <span class="lang-badge native-badge">ESP | C2 NATIVE</span>
+                    <span class="lang-badge progress-badge" data-i18n="progress-badge">ENG | B2-C1 IN PROGRESS</span>
+                    <span class="lang-badge native-badge" data-i18n="native-badge">ESP | C2 NATIVE</span>
                 </div>
 
                 <div class="about-text-wrapper">
-                    <p class="about-lead">
+                    <p class="about-lead" data-i18n="about-lead">
                         My core value lies in narrative versatility: <br>
                         <strong>I leverage 4 years of expertise in multimedia production to direct, edit, and post-produce high-impact visual stories.</strong>
                     </p>
-                    <p class="about-body">
+                    <p class="about-body" data-i18n="about-body">
                         I don't just cut clips; I craft immersive atmospheres. By blending cinematic narrative with interactive media, <strong>I transform concepts into experiences that engage audiences across any screen.</strong>
                     </p>
                 </div>
 
                 <div class="about-actions">
-                    <a target="_blank" href="./assets/files/CV_JuanPabloZamora_A2026.pdf" class="btn btn-resume-download">Download full resume</a>
+                    <a target="_blank" href="./assets/files/CV_JuanPabloZamora_A2026.pdf" class="btn btn-resume-download" data-i18n="btn-resume-download">Download full resume</a>
                     <a href="https://www.linkedin.com/in/jzamora11/" target="_blank" rel="noopener noreferrer" class="linkedin-social-btn" aria-label="LinkedIn Profile">
                         <img src="./assets/img/linkedin.png" alt="Linkedin">
                     </a>
@@ -207,8 +210,8 @@
         <div class="contact-container">
             <div class="contact-card">
                 <div class="contact-header">
-                    <h2>Ready for the next level?</h2>
-                    <p>Let's build your next visual experience</p>
+                    <h2 data-i18n="contact-title">Ready for the next level?</h2>
+                    <p data-i18n="contact-subtitle">Let's build your next visual experience</p>
                 </div>
 
                 <form id="contact-form" class="contact-form" method="POST">
@@ -217,27 +220,27 @@
                     
                     <div class="form-row-top">
                         <div class="form-group">
-                            <label for="name">Name <span>*</span></label>
+                            <label for="name" data-i18n="contact-name">Name <span>*</span></label>
                             <input type="text" id="name" name="name" placeholder="Ex. Jorge Martínez" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email <span>*</span></label>
+                            <label for="email" data-i18n="contact-email">Email <span>*</span></label>
                             <input type="email" id="email" name="email" placeholder="mail@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone number</label>
+                            <label for="phone" data-i18n="contact-phone">Phone number</label>
                             <input type="tel" id="phone" name="phone" placeholder="Ex. 123 456 7890">
                         </div>
                     </div>
 
                     <div class="form-group textarea-group">
-                        <label for="message">Tell me about your project <span>*</span></label>
+                        <label for="message" data-i18n="contact-message">Tell me about your project <span>*</span></label>
                         <textarea id="message" name="message" rows="5" placeholder="What are you thinking about?" required></textarea>
                     </div>
 
                     <div id="form-result" style="display: none; margin-bottom: 20px; font-weight: 500; text-align: center; color: var(--accent-color);"></div>
 
-                    <button type="submit" class="btn-submit">Send message</button>
+                    <button type="submit" class="btn-submit" data-i18n="btn-submit">Send message</button>
                 </form>
             </div>
         </div>

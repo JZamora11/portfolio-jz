@@ -11,12 +11,17 @@
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/project-detail.css">
+
+    <!-- JS -->
+    <script defer src="../js/translations.js"></script>
 </head>
 <body>
+    <button id="lang-toggle-btn" class="lang-btn" aria-label="Change language" style="position: fixed; z-index: 9999;">EN / ES</button>
+
     <!-- PROJECT -->
     <main class="project-showcase-wrapper">
         <div class="media-container-card p-4-5 img-zoom">
-            <h1 class="project-showcase-title">Drop</h1>
+            <h1 class="project-showcase-title" data-i18n="project-showcase-drop">Drop</h1>
             <div class="project-media-content">
                 <div class="placeholder-glow"></div>
                 <img src="../assets/img/projects/white_thunder.jpg" alt="Drop - Air Jordan 4 White Thunder">
@@ -42,24 +47,24 @@
                     </div>
                 </div>
                 
-                <h2 class="project-description-title">
+                <h2 class="project-description-title" data-i18n="project-description-drop">
                     Retail graphic design and high-impact visual composition for the launch of the Air Jordan 4 collection.
                 </h2>
                 
                 <div class="project-steps-list">
                     <div class="step-item">
-                        <h3>01. Project Challenge</h3>
-                        <p>The main objective of this project was to <span class="highlight-text">create a high-impact retail poster</span> for a Jordan brand product release. The visual challenge was to <span class="highlight-text">integrate bold typography and UI elements</span> over a complex texture without compromising readability or the premium presentation of the product.</p>
+                        <h3 data-i18n="step-item-project">01. Project Challenge</h3>
+                        <p data-i18n="text-project-drop">The main objective of this project was to <span class="highlight-text">create a high-impact retail poster</span> for a Jordan brand product release. The visual challenge was to <span class="highlight-text">integrate bold typography and UI elements</span> over a complex texture without compromising readability or the premium presentation of the product.</p>
                     </div>
                     
                     <div class="step-item">
-                        <h3>02. Strategy & Technical Development</h3>
-                        <p>Using a <span class="highlight-text">product-first layout over a grey wood-grain texture</span>, I structured the information for immediate impact. Solutions included <span class="highlight-text">applying outlined typography and precise kerning</span> to the main headline, creating contrast against the dark background while highlighting the product itself.</p>
+                        <h3 data-i18n="step-item-strategy">02. Strategy & Technical Development</h3>
+                        <p data-i18n="text-strategy-drop">Using a <span class="highlight-text">product-first layout over a grey wood-grain texture</span>, I structured the information for immediate impact. Solutions included <span class="highlight-text">applying outlined typography and precise kerning</span> to the main headline, creating contrast against the dark background while highlighting the product itself.</p>
                     </div>
                     
                     <div class="step-item">
-                        <h3>03. Final Polish & Optimization</h3>
-                        <p>To finalize the asset, I focused on visual hierarchy. <span class="highlight-text">Integrated a realistic UI search bar</span> and placed the product and brand logos  at the bottom for professional branding. The final poster delivers <span class="highlight-text">immediate brand recognition and clear call-to-actions</span> within a sophisticated, textured environment, ready for digital distribution.</p>
+                        <h3 data-i18n="step-item-final">03. Final Polish & Optimization</h3>
+                        <p data-i18n="text-final-drop">To finalize the asset, I focused on visual hierarchy. <span class="highlight-text">Integrated a realistic UI search bar</span> and placed the product and brand logos  at the bottom for professional branding. The final poster delivers <span class="highlight-text">immediate brand recognition and clear call-to-actions</span> within a sophisticated, textured environment, ready for digital distribution.</p>
                     </div>
                 </div>
             </div>
@@ -68,21 +73,21 @@
                 <div class="project-meta-card">
                     <div class="meta-group">
                         <span class="meta-label">Rol</span>
-                        <span class="meta-value">Graphic Designer</span>
+                        <span class="meta-value" data-i18n="rol-drop">Graphic Designer</span>
                     </div>
                     <div class="meta-group">
-                        <span class="meta-label">Format</span>
+                        <span class="meta-label" data-i18n="format">Format</span>
                         <span class="meta-value">Vertical (4:5) / 1080x1350</span>
                     </div>
                     <div class="meta-group">
-                        <span class="meta-label">Year</span>
+                        <span class="meta-label" data-i18n="year">Year</span>
                         <span class="meta-value">2026</span>
                     </div>
                 </div>
                 
                 <div class="project-cta-box">
-                    <p class="cta-text">Do you like this style<br>for your brand?</p>
-                    <a href="../#contact" class="btn-project-cta">
+                    <p class="cta-text" data-i18n="cta-text">Do you like this style<br>for your brand?</p>
+                    <a href="../#contact" class="btn-project-cta" data-i18n="btn-project-cta">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />

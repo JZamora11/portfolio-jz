@@ -13,15 +13,18 @@
     <link rel="stylesheet" href="./styles/projects.css">
 
     <!-- Script -->
-    <script src="./js/projects.js"></script>
+    <script defer src="./js/projects.js"></script>
+    <script defer src="./js/translations.js"></script>
 </head>
 <body>
+    <button id="lang-toggle-btn" class="lang-btn" aria-label="Change language" style="position: fixed; z-index: 9999;">EN / ES</button>
+
     <main class="projects-page">
         <!-- Hero Section -->
         <section class="portfolio-hero">
             <div class="hero-container">
-                <h1 class="hero-title">PORTFOLIO</h1>
-                <p class="hero-subtitle">A collection of <span>commercial pieces</span>, <span>cinematic narratives</span>, and <span>interactive multimedia projects</span></p>
+                <h1 class="hero-title" data-i18n="hero-title">PORTFOLIO</h1>
+                <p class="hero-subtitle" data-i18n="hero-subtitle">A collection of <span>commercial pieces</span>, <span>cinematic narratives</span>, and <span>interactive multimedia projects</span></p>
             </div>
         </section>
 
@@ -31,18 +34,18 @@
                 <!-- Filter -->
                 <aside class="category-sidebar">
                     <div class="sidebar-header">
-                        <h3 class="sidebar-title">Category</h3>
+                        <h3 class="sidebar-title" data-i18n="sidebar-title">Category</h3>
                         <button type="button" class="filter-toggle" aria-label="Mostrar categorías">
-                            <span class="selected-filter-text">All</span>
+                            <span class="selected-filter-text" data-i18n="selected-filter-text">All</span>
                             <span class="toggle-icon">▼</span>
                         </button>
                     </div>
                     <ul class="category-list">
-                        <li class="category-item"><a href="#" class="category-link active" data-category="all">All</a></li>
-                        <li class="category-item"><a href="#" class="category-link" data-category="short-films">Short Films <span>(1)</span></a></li>
+                        <li class="category-item"><a href="#" class="category-link active" data-category="all" data-i18n="all">All</a></li>
+                        <li class="category-item"><a href="#" class="category-link" data-category="short-films" data-i18n="short-films">Short Films <span>(1)</span></a></li>
                         <li class="category-item"><a href="#" class="category-link" data-category="motion-graphics">Motion Graphics <span></span></a></li>
-                        <li class="category-item"><a href="#" class="category-link" data-category="commercial">Commercial & Social <span>(2)</span></a></li>
-                        <li class="category-item"><a href="#" class="category-link" data-category="digital">Digital & Interactive <span></span></a></li>
+                        <li class="category-item"><a href="#" class="category-link" data-category="commercial" data-i18n="commercial">Commercial & Social <span>(2)</span></a></li>
+                        <li class="category-item"><a href="#" class="category-link" data-category="digital" data-i18n="digital">Digital & Interactive <span></span></a></li>
                     </ul>
                 </aside>
 
@@ -51,7 +54,7 @@
                     <a href="./projects/loyalty-rdr2" class="portfolio-item f-16-9" data-category="short-films">
                         <img src="./assets/img/projects/loyalty_thumbnail.png" alt="Loyalty - RDR2 Trailer" class="portfolio-bg-img">
                         <div class="label">
-                            <h2>LOYALTY</h2>
+                            <h2 data-i18n="project-loyalty">LOYALTY</h2>
                             <div class="software-badge">
                                 <img src="./assets/img/brands/premiere.png" alt="Premiere Pro"> Premiere Pro
                             </div>
@@ -61,7 +64,7 @@
                     <a href="./projects/octane-2026" class="portfolio-item f-9-16" data-category="commercial">
                         <img src="./assets/img/projects/octane-thumbnail.png" alt="Octane 2026" class="portfolio-bg-img">
                         <div class="label">
-                            <h2>OCTANE</h2>
+                            <h2 data-i18n="project-octane">OCTANE</h2>
                             <div class="software-badge">
                                 <img src="./assets/img/brands/premiere.png" alt="Premiere Pro"> Premiere Pro
                             </div>
@@ -71,7 +74,7 @@
                     <a href="./projects/drop" class="portfolio-item f-4-5" data-category="commercial">
                         <img src="./assets/img/projects/white_thunder.jpg" alt="Drop - Air Jordan 4 White Thunder" class="portfolio-bg-img">
                         <div class="label">
-                            <h2>DROP</h2>
+                            <h2 data-i18n="project-drop">DROP</h2>
                             <div class="software-badge">
                                 <img src="./assets/img/brands/illustrator.png" alt="Illustrator"> Illustrator
                             </div>
@@ -86,8 +89,8 @@
     <footer class="portfolio-footer">
         <div class="footer-cta-card">
             <div class="cta-content">
-                <h2>Do you want to talk about your project?</h2>
-                <a href="./#contact" class="btn-send-message">Send message</a>
+                <h2 data-i18n="cta-title">Do you want to talk about your project?</h2>
+                <a href="./#contact" class="btn-send-message" data-i18n="btn-send-message">Send message</a>
             </div>
             <div class="cta-avatar-wrapper">
                 <img src="./assets/img/juanzamora_color.png" alt="Juan Zamora" class="cta-avatar">

@@ -11,12 +11,17 @@
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/project-detail.css">
+
+    <!-- JS -->
+    <script defer src="../js/translations.js"></script>
 </head>
 <body>
+    <button id="lang-toggle-btn" class="lang-btn" aria-label="Change language" style="position: fixed; z-index: 9999;">EN / ES</button>
+
     <!-- PROJECT -->
     <main class="project-showcase-wrapper">
         <div class="media-container-card p-16-9">
-            <h1 class="project-showcase-title">Loyalty</h1>
+            <h1 class="project-showcase-title" data-i18n="project-showcase-loyalty">Loyalty</h1>
             <div class="project-media-content">
                 <div class="placeholder-glow"></div>
                 <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1920' viewBox='0 0 16 9'></svg>" style="display: block; width: 100%; height: auto; opacity: 0; pointer-events: none;">
@@ -44,24 +49,24 @@
                     </div>
                 </div>
                 
-                <h2 class="project-description-title">
-                    Cinematic trailer pacing, isolated voice stems, and layered SFX design for Red Dead Redemption 2.
+                <h2 class="project-description-title" data-i18n="project-description-loyalty">
+                    Tráiler cinematográfico con pistas de voz aisladas y diseño de efectos de sonido para Red Dead Redemption 2.
                 </h2>
                 
                 <div class="project-steps-list">
                     <div class="step-item">
-                        <h3>01. Project Challenge</h3>
-                        <p>The main objective of this project was to <span class="highlight-text">build a high-impact cinematic trailer</span> for Red Dead Redemption 2. The visual and structural challenge lay in maintaining <span class="highlight-text">a strong narrative flow</span> without cluttering the screen, while establishing a powerful atmospheric pacing tailored for digital platforms.</p>
+                        <h3 data-i18n="step-item-project">01. Project Challenge</h3>
+                        <p data-i18n="text-project-loyalty">The main objective of this project was to <span class="highlight-text">build a high-impact cinematic trailer</span> for Red Dead Redemption 2. The visual and structural challenge lay in maintaining <span class="highlight-text">a strong narrative flow</span> without cluttering the screen, while establishing a powerful atmospheric pacing tailored for digital platforms.</p>
                     </div>
                     
                     <div class="step-item">
-                        <h3>02. Strategy & Technical Development</h3>
-                        <p>Through a process focused on <span class="highlight-text">sound-first narrative assembly</span>, specific editing solutions were <span class="highlight-text">executed using Premiere Pro</span>. Isolated voice stems and layered SFX design were <span class="highlight-text">structured into a precise audio play</span>, ensuring a seamless rhythm that dictates the visual cuts and keeps the viewer engaged.</p>
+                        <h3 data-i18n="step-item-strategy">02. Strategy & Technical Development</h3>
+                        <p data-i18n="text-strategy-loyalty">Through a process focused on <span class="highlight-text">sound-first narrative assembly</span>, specific editing solutions were <span class="highlight-text">executed using Premiere Pro</span>. Isolated voice stems and layered SFX design were <span class="highlight-text">structured into a precise audio play</span>, ensuring a seamless rhythm that dictates the visual cuts and keeps the viewer engaged.</p>
                     </div>
                     
                     <div class="step-item">
-                        <h3>03. Final Polish & Optimization</h3>
-                        <p>To ensure a high-end professional standard, <span class="highlight-text">a native 16:9 widescreen format with custom cinematic letterboxing</span> was applied. The final result is a polished asset featuring <span class="highlight-text">fluid visual pacing and crisp audio integration</span>, strategically designed to stand out in a professional portfolio from the very first second.</p>
+                        <h3 data-i18n="step-item-final">03. Final Polish & Optimization</h3>
+                        <p data-i18n="text-final-loyalty">To ensure a high-end professional standard, <span class="highlight-text">a native 16:9 widescreen format with custom cinematic letterboxing</span> was applied. The final result is a polished asset featuring <span class="highlight-text">fluid visual pacing and crisp audio integration</span>, strategically designed to stand out in a professional portfolio from the very first second.</p>
                     </div>
                 </div>
             </div>
@@ -70,21 +75,21 @@
                 <div class="project-meta-card">
                     <div class="meta-group">
                         <span class="meta-label">Rol</span>
-                        <span class="meta-value">Video Editor & Sound Designer</span>
+                        <span class="meta-value" data-i18n="rol-loyalty">Video Editor & Sound Designer</span>
                     </div>
                     <div class="meta-group">
-                        <span class="meta-label">Format</span>
-                        <span class="meta-value">Widescreen (16:9) / 1920x1080</span>
+                        <span class="meta-label" data-i18n="format">Format</span>
+                        <span class="meta-value" data-i18n="format-loyalty">Widescreen (16:9) / 1920x1080</span>
                     </div>
                     <div class="meta-group">
-                        <span class="meta-label">Year</span>
+                        <span class="meta-label" data-i18n="year">Year</span>
                         <span class="meta-value">2026</span>
                     </div>
                 </div>
                 
                 <div class="project-cta-box">
-                    <p class="cta-text">Do you like this style<br>for your brand?</p>
-                    <a href="../#contact" class="btn-project-cta">
+                    <p class="cta-text" data-i18n="cta-text">Do you like this style<br>for your brand?</p>
+                    <a href="../#contact" class="btn-project-cta" data-i18n="btn-project-cta">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
