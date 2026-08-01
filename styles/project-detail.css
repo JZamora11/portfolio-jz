@@ -7,6 +7,66 @@
     --font-mono: "Roboto Mono", monospace;
 }
 
+/* TOGGLE */
+#lang-toggle-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    
+    width: 90px;
+    height: 36px;
+    background-color: #1e293b;
+    border-radius: 36px;
+    border: none;
+    cursor: pointer;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.4s ease;
+    overflow: hidden;
+}
+
+#lang-toggle-btn .lang-option {
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-white);
+    z-index: 1;
+    width: 26px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+#lang-toggle-btn::after {
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 28px;
+    background-color: var(--text-white);
+    border-radius: 25px;
+    top: 4px;
+    left: 4px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#lang-toggle-btn[data-lang="en"] {
+    background-color: #db4e44;
+}
+#lang-toggle-btn[data-lang="en"]::after {
+    transform: translateX(1px);
+}
+
+#lang-toggle-btn[data-lang="es"] {
+    background-color: #2a579b;
+}
+#lang-toggle-btn[data-lang="es"]::after {
+    transform: translateX(42px);
+}
+
 
 /* PROJECT */
 .project-detail-body {

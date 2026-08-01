@@ -120,6 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
         localStorage.setItem("portfolio-lang", lang);
+
+        const langToggleBtn = document.getElementById("lang-toggle-btn");
+        if (langToggleBtn) {
+            langToggleBtn.setAttribute("data-lang", lang);
+        }
     }
 
     const savedLang = localStorage.getItem("portfolio-lang");
